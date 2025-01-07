@@ -1,15 +1,17 @@
 <template>
   <div class="head">
-    
     <!-- Центральный блок с ссылками -->
     <div class="links">
       <a>About me</a>
       <a>Projects</a>
       <a>Connection</a>
     </div>
-    <div class = "butterfly">
-      <img src = "./assets/butterfly.png" alt = "butterfly">
+
+    <!-- Блок с картинкой -->
+    <div class="butterfly">
+      <img src="./assets/butterfly.png" alt="butterfly">
     </div>
+
     <!-- Правый блок с кнопкой -->
     <div class="buttons">
       <button class="my-button">My CV</button>
@@ -33,10 +35,9 @@ body {
 
 .head {
   display: flex;
-  justify-content: center; /* Центрируем содержимое по горизонтали */
+  justify-content: space-between; /* Распределяем пространство между элементами */
   align-items: center; /* Выравниваем элементы по центру по вертикали */
   padding: 0 20px; /* Отступы слева и справа */
-  gap: 40px; /* Расстояние между ссылками и кнопкой */
 }
 
 .links {
@@ -73,8 +74,19 @@ a:hover {
   color: white;
 }
 
+.butterfly {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 50%; /* Сдвигаем картинку на 50% вправо */
+  transform: translateX(-50%); /* Центрируем картинку */
+}
+
+.butterfly img {
+  width: 100px; /* Ширина картинки */
+  height: auto; /* Высота автоматически подстраивается */
+}
+
 .buttons {
-  margin-left: auto; /* Кнопка сдвигается вправо, но остается близко к ссылкам */
+  margin-left: auto; /* Кнопка сдвигается вправо */
 }
 
 .my-button {
