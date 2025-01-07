@@ -1,42 +1,50 @@
-<script>
-  
-</script>
-
 <template>
-    <div class = "head">
-        <div class = "links">
-          <a>About me</a>
-          <a>Projects</a>
-          <a>Connection</a>
-        </div>
-
-
-        <div class = "buttons">
-          <button type="button">My CV</button>
-        </div>
+  <div class="head">
+    
+    <!-- Центральный блок с ссылками -->
+    <div class="links">
+      <a>About me</a>
+      <a>Projects</a>
+      <a>Connection</a>
     </div>
-    <hr class="separator">
+    <div class = "butterfly">
+      <img src = "./assets/butterfly.png" alt = "butterfly">
+    </div>
+    <!-- Правый блок с кнопкой -->
+    <div class="buttons">
+      <button class="my-button">My CV</button>
+    </div>
+  </div>
+  <hr class="separator">
 </template>
+
+<script>
+export default {
+  name: 'MyComponent',
+};
+</script>
 
 <style>
 body {
   background-color: #1F1F1F;
+  margin: 0;
+  padding: 0;
 }
 
 .head {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  padding: 0 20px; /* Отступы слева и справа */
+  gap: 40px; /* Расстояние между ссылками и кнопкой */
 }
 
 .links {
-  color: white;
   display: flex;
-  gap: 40px;
+  gap: 40px; /* Расстояние между ссылками */
   font-size: 20px;
   padding: 34px 15px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 a {
@@ -52,18 +60,38 @@ a::after {
   bottom: -35px; /* Позиция подчеркивания */
   width: 100%; /* Подчеркивание на всю ширину ссылки */
   height: 4px; /* Толщина подчеркивания */
-  background-color: #33CAFF; /* Цвет подчеркивания (оранжевый) */
+  background-color: #33CAFF; /* Цвет подчеркивания */
   opacity: 0; /* Начальная прозрачность (подчеркивание скрыто) */
   transition: opacity 0.5s ease; /* Плавное появление подчеркивания */
 }
 
 a:hover::after {
   opacity: 1; /* Подчеркивание становится видимым */
-  
 }
+
 a:hover {
   color: white;
 }
+
+.buttons {
+  margin-left: auto; /* Кнопка сдвигается вправо, но остается близко к ссылкам */
+}
+
+.my-button {
+  padding: 15px 30px; /* Внутренние отступы кнопки */
+  font-size: 20px; /* Размер текста */
+  color: white; /* Цвет текста */
+  background-color: #33CAFF; /* Цвет фона кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 10px; /* Закругленные углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.my-button:hover {
+  background-color: #1F8FB0; /* Цвет фона при наведении */
+}
+
 .separator {
   width: 100%; /* Ширина линии */
   border: none; /* Убираем стандартную рамку */
