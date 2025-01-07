@@ -19,8 +19,7 @@
   </div>
   <hr class="separator">
 
-
-
+  <!-- Блок "About Me" -->
   <div class="aboutMe">
     <h1>Metelykx</h1>
     <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
@@ -40,6 +39,7 @@ body {
   background-color: #1F1F1F;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif; /* Добавлено для всего документа */
 }
 
 .head {
@@ -61,7 +61,6 @@ a {
   color: rgb(196, 196, 196);
   text-decoration: none; /* Убираем подчеркивание у ссылок по умолчанию */
   position: relative; /* Для позиционирования псевдоэлемента */
-  font-family: 'Open Sans', sans-serif;
 }
 
 a::after {
@@ -108,7 +107,6 @@ a:hover {
   border-radius: 10px; /* Закругленные углы */
   cursor: pointer; /* Курсор в виде указателя */
   transition: background-color 0.3s ease; /* Плавное изменение цвета */
-  font-family: 'Open Sans', sans-serif;
 }
 
 .my-button:hover {
@@ -123,13 +121,27 @@ a:hover {
   margin-top: 0px; /* Отступ сверху */
 }
 
-.aboutMe h1{ 
-  font-family: 'Open Sans', sans-serif;
-  font-weight:700;
-  color:#33CAFF;
-  font-size: 45px;
-  margin-left:300px;
-  margin-top:50px;
+.aboutMe {
+  max-width: 800px; /* Ограничение ширины текста */
+  margin: 0 auto; /* Центрирование блока */
+  padding: 20px; /* Отступы внутри блока */
 }
 
+.aboutMe h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #33CAFF;
+  font-size: 45px;
+  margin-top: 50px;
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.aboutMe p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 25px;
+  line-height: 1.6; /* Межстрочный интервал */
+  word-wrap: break-word; /* Перенос длинных слов */
+}
 </style>
