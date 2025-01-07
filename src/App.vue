@@ -18,6 +18,15 @@
     </div>
   </div>
   <hr class="separator">
+
+
+
+  <div class="aboutMe">
+    <h1>Metelykx</h1>
+    <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
+      My main goal is to develop my products that will help society and cooperate with Pavel Durov.
+      I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
+  </div>
 </template>
 
 <script>
@@ -113,4 +122,14 @@ a:hover {
   background-color: #383838; /* Цвет линии */
   margin-top: 0px; /* Отступ сверху */
 }
+
+.aboutMe h1{ 
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+  color:#33CAFF;
+  font-size: 45px;
+  margin-left:300px;
+  margin-top:50px;
+}
+
 </style>
