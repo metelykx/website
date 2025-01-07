@@ -3,9 +3,13 @@
 </script>
 
 <template>
-  <div class = "">
-
-  </div>
+    <div class = "head">
+        <div class = "links">
+          <a>Обо мне</a>
+          <a>Проекты</a>
+          <a>Связь</a>
+        </div>
+    </div>
 </template>
 
 <style>
