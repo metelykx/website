@@ -27,7 +27,9 @@ body {
 .links {
   color: white;
   display: flex;
-  gap: 20px;
+  gap: 40px;
+  font-size: 20px;
+  padding: 34px 15px;
 }
 
 a {
@@ -40,7 +42,7 @@ a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -4px; /* Позиция подчеркивания */
+  bottom: -20px; /* Позиция подчеркивания */
   width: 100%; /* Подчеркивание на всю ширину ссылки */
   height: 4px; /* Толщина подчеркивания */
   background-color: #33CAFF; /* Цвет подчеркивания (оранжевый) */
