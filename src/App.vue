@@ -52,6 +52,7 @@ a {
   color: rgb(196, 196, 196);
   text-decoration: none; /* Убираем подчеркивание у ссылок по умолчанию */
   position: relative; /* Для позиционирования псевдоэлемента */
+  font-family: 'Open Sans', sans-serif;
 }
 
 a::after {
@@ -98,6 +99,7 @@ a:hover {
   border-radius: 10px; /* Закругленные углы */
   cursor: pointer; /* Курсор в виде указателя */
   transition: background-color 0.3s ease; /* Плавное изменение цвета */
+  font-family: 'Open Sans', sans-serif;
 }
 
 .my-button:hover {
