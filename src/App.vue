@@ -138,6 +138,7 @@ a:hover {
   max-width: 1200px; /* Ограничение ширины блока */
   margin-left: 10%; /* Отступ слева */
   padding: 20px; /* Отступы внутри блока */
+  padding-bottom:40px;
 }
 
 .aboutMe .text {
