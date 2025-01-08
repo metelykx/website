@@ -46,9 +46,9 @@
       </div>
     </div>
 
-    <div class = "cars">
+    <div class="cars">
       <img src="./assets/person.png" alt="">
-      <div class = "cars-text">
+      <div class="cars-text">
         <h2>Cars</h2> 
         <p>
           Thanks to this project, the user will be able to choose the 
@@ -58,9 +58,9 @@
       </div>
     </div>
 
-    <div class = "cart">
+    <div class="cart">
       <img src="./assets/cart.png" alt="">
-      <div class = "cart-text">
+      <div class="cart-text">
         <h2>Marketplace</h2>
         <p>
           The marketplace was launched in December 2024. In the region where I live, 
@@ -71,10 +71,27 @@
     </div>
   </div>
 
-
-
-  <div class = "connection"> 
+  <!-- Блок "Connection" -->
+  <div class="connection"> 
     <h1>Connection</h1>
+    <div class="social_media">
+      <div class="telegram">
+        <img src="./assets/telegram.png" alt="">
+        <h3>Telegram Channel</h3>
+      </div>
+      <div class="youtube">
+        <img src="./assets/youtube.png" alt="">
+        <h3>Youtube</h3>
+      </div>
+      <div class="github">
+        <img src="./assets/github.png" alt="">
+        <h3>Github</h3>
+      </div>
+      <div class="gmail">
+        <img src="./assets/gmail.png" alt="">
+        <h3>Gmail</h3>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -256,6 +273,7 @@ a:hover {
   line-height: 1.6; /* Межстрочный интервал */
   margin: 0; /* Убираем отступы у текста */
 }
+
 .projects .cars {
   display: flex; /* Используем flexbox для выравнивания */
   align-items: center; /* Выравниваем элементы по центру по вертикали */
@@ -267,7 +285,6 @@ a:hover {
 .projects .cars img {
   width: 250px; /* Ширина картинки */
   height: 250px; /* Высота картинки */
-
   object-fit: cover; /* Сохраняем пропорции картинки */
 }
 
@@ -304,7 +321,6 @@ a:hover {
 .projects .cart img {
   width: 250px; /* Ширина картинки */
   height: 250px; /* Высота картинки */
-
   object-fit: cover; /* Сохраняем пропорции картинки */
 }
 
@@ -330,4 +346,48 @@ a:hover {
   margin: 0; /* Убираем отступы у текста */
 }
 
+.connection {
+  text-align: center; /* Центрируем заголовок */
+  margin-top: 40px; /* Отступ сверху */
+}
+
+.connection h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px; /* Отступ снизу для заголовка */
+}
+
+.social_media {
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  gap: 40px; /* Расстояние между картинками */
+  max-width: 1200px; /* Ограничение ширины блока */
+  margin: 0 auto; /* Центрируем блок */
+}
+
+.social_media img {
+  width: 250px; /* Ширина картинки */
+  height: 250px; /* Высота картинки */
+
+  object-fit: cover; /* Сохраняем пропорции картинки */
+}
+
+.social_media h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px; /* Отступ сверху для текста */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .social_media {
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрируем элементы */
+    gap: 20px; /* Уменьшаем расстояние между элементами */
+  }
+}
 </style>
