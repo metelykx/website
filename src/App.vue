@@ -45,6 +45,18 @@
           The last three of them are the most popular currencies in the world.</p>
       </div>
     </div>
+
+    <div class = "cars">
+      <img src="./assets/aboutMe.png" alt="cars">
+      <div class = "cars-text">
+        <h2>Cars</h2> 
+        <p>
+          Thanks to this project, the user will be able to choose the 
+          right car using artificial intelligence and order it from another country.
+          Also, choose your favorite cars and add them to favorites.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -225,37 +237,5 @@ a:hover {
   font-size: 20px;
   line-height: 1.6; /* Межстрочный интервал */
   margin: 0; /* Убираем отступы у текста */
-}
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-  .aboutMe {
-    flex-direction: column; /* Элементы располагаются вертикально */
-    margin-left: 20px; /* Уменьшаем отступ слева */
-    padding: 10px; /* Уменьшаем отступы внутри блока */
-    gap: 20px; /* Уменьшаем расстояние между элементами */
-  }
-
-  .aboutMe .image img {
-    width: 150px; /* Уменьшаем размер картинки */
-    height: 150px; /* Уменьшаем размер картинки */
-    margin-top: 20px; /* Отступ сверху для картинки */
-    margin-left: 0; /* Убираем отступ слева на мобильных устройствах */
-  }
-
-  .projects .converter {
-    flex-direction: column; /* Элементы располагаются вертикально */
-    align-items: center; /* Центрируем элементы */
-    text-align: center; /* Текст по центру */
-  }
-
-  .projects .converter img {
-    width: 200px; /* Уменьшаем размер картинки */
-    height: 200px; /* Уменьшаем размер картинки */
-  }
-
-  .projects .converter-text {
-    margin-top: 20px; /* Отступ сверху для текста */
-  }
 }
 </style>
