@@ -47,13 +47,23 @@
     </div>
 
     <div class = "cars">
-      <img src="./assets/aboutMe.png" alt="cars">
+      <img src="./assets/person.png" alt="">
       <div class = "cars-text">
         <h2>Cars</h2> 
         <p>
           Thanks to this project, the user will be able to choose the 
           right car using artificial intelligence and order it from another country.
           Also, choose your favorite cars and add them to favorites.
+        </p>
+      </div>
+    </div>
+
+    <div class = "marketplace">
+      <img src="./assets/cart.png" alt="">
+      <div class = "cart-text">
+        <h2>Marketplace</h2>
+        <p>
+          
         </p>
       </div>
     </div>
@@ -231,6 +241,42 @@ a:hover {
 }
 
 .projects .converter p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  line-height: 1.6; /* Межстрочный интервал */
+  margin: 0; /* Убираем отступы у текста */
+}
+.projects .cars {
+  display: flex; /* Используем flexbox для выравнивания */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  gap: 40px; /* Расстояние между картинкой и текстом */
+  margin: 20px auto; /* Центрируем блок и добавляем отступы */
+  max-width: 1200px; /* Ограничение ширины блока */
+}
+
+.projects .cars img {
+  width: 300px; /* Ширина картинки */
+  height: 300px; /* Высота картинки */
+
+  object-fit: cover; /* Сохраняем пропорции картинки */
+}
+
+.projects .cars-text {
+  flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.projects .cars h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #33CAFF;
+  font-size: 30px;
+  margin-top: 0; /* Убираем отступ сверху */
+  margin-bottom: 10px; /* Отступ снизу для заголовка */
+}
+
+.projects .cars p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: white;
