@@ -1,95 +1,101 @@
 <template>
-  <div class="head">
-    <!-- Центральный блок с ссылками -->
-    <div class="links">
-      <a>About me</a>
-      <a>Projects</a>
-      <a>Connection</a>
-    </div>
+  <div class="background-container">
+    <!-- Контейнер для кругов -->
+    <div class="circles-container"></div>
 
-    <!-- Блок с картинкой -->
-    <div class="butterfly">
-      <img src="./assets/butterfly.png" alt="butterfly">
-    </div>
+    <!-- Основной контент -->
+    <div class="content">
+      <!-- Шапка -->
+      <div class="head">
+        <div class="links">
+          <a>About me</a>
+          <a>Projects</a>
+          <a>Connection</a>
+        </div>
 
-    <!-- Правый блок с кнопкой -->
-    <div class="buttons">
-      <button class="my-button">My CV</button>
-    </div>
-  </div>
-  <hr class="separator">
+        <div class="butterfly">
+          <img src="./assets/butterfly.png" alt="butterfly">
+        </div>
 
-  <!-- Блок "About Me" -->
-  <div class="aboutMe">
-    <div class="text">
-      <h1>Metelykx</h1>
-      <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
-        My main goal is to develop my products that will help society and cooperate with Pavel Durov.
-        I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
-    </div>
-    <div class="image">
-      <img src="./assets/aboutMe.jpg" alt="aboutMe">
-    </div>
-  </div>
-
-  <!-- Блок "Projects" -->
-  <div class="projects">
-    <h1>Projects</h1>
-
-    <div class="converter">
-      <img src="./assets/card.png" alt="converter">
-      <div class="converter-text">
-        <h2>Converter</h2> <!-- Заголовок над текстом -->
-        <p>The essence of the project is currency conversion, and I have worked with
-          currencies such as Hryvnia, Ruble, Dram, Dollar, Euro and Pound Sterling. 
-          The last three of them are the most popular currencies in the world.</p>
+        <div class="buttons">
+          <button class="my-button">My CV</button>
+        </div>
       </div>
-    </div>
+      <hr class="separator">
 
-    <div class="cars">
-      <img src="./assets/person.png" alt="">
-      <div class="cars-text">
-        <h2>Cars</h2> 
-        <p>
-          Thanks to this project, the user will be able to choose the 
-          right car using artificial intelligence and order it from another country.
-          Also, choose your favorite cars and add them to favorites.
-        </p>
+      <!-- Блок "About Me" -->
+      <div class="aboutMe">
+        <div class="text">
+          <h1>Metelykx</h1>
+          <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
+            My main goal is to develop my products that will help society and cooperate with Pavel Durov.
+            I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
+        </div>
+        <div class="image">
+          <img src="./assets/aboutMe.jpg" alt="aboutMe">
+        </div>
       </div>
-    </div>
 
-    <div class="cart">
-      <img src="./assets/cart.png" alt="">
-      <div class="cart-text">
-        <h2>Marketplace</h2>
-        <p>
-          The marketplace was launched in December 2024. In the region where I live, 
-          grocery delivery is poorly developed and it was decided to solve this problem. 
-          A marketplace with food delivery from different stores in the region
-        </p>
-      </div>
-    </div>
-  </div>
+      <!-- Блок "Projects" -->
+      <div class="projects">
+        <h1>Projects</h1>
 
-  <!-- Блок "Connection" -->
-  <div class="connection"> 
-    <h1>Connection</h1>
-    <div class="social_media">
-      <div class="telegram">
-        <img src="./assets/telegram.png" alt="">
-        <h3>Telegram Channel</h3>
+        <div class="converter">
+          <img src="./assets/card.png" alt="converter">
+          <div class="converter-text">
+            <h2>Converter</h2>
+            <p>The essence of the project is currency conversion, and I have worked with
+              currencies such as Hryvnia, Ruble, Dram, Dollar, Euro and Pound Sterling.
+              The last three of them are the most popular currencies in the world.</p>
+          </div>
+        </div>
+
+        <div class="cars">
+          <img src="./assets/person.png" alt="">
+          <div class="cars-text">
+            <h2>Cars</h2>
+            <p>
+              Thanks to this project, the user will be able to choose the
+              right car using artificial intelligence and order it from another country.
+              Also, choose your favorite cars and add them to favorites.
+            </p>
+          </div>
+        </div>
+
+        <div class="cart">
+          <img src="./assets/cart.png" alt="">
+          <div class="cart-text">
+            <h2>Marketplace</h2>
+            <p>
+              The marketplace was launched in December 2024. In the region where I live,
+              grocery delivery is poorly developed and it was decided to solve this problem.
+              A marketplace with food delivery from different stores in the region
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="youtube">
-        <img src="./assets/youtube.png" alt="">
-        <h3>Youtube</h3>
-      </div>
-      <div class="github">
-        <img src="./assets/github.png" alt="">
-        <h3>Github</h3>
-      </div>
-      <div class="gmail">
-        <img src="./assets/gmail.png" alt="">
-        <h3>Gmail</h3>
+
+      <!-- Блок "Connection" -->
+      <div class="connection">
+        <h1>Connection</h1>
+        <div class="social_media">
+          <div class="telegram">
+            <img src="./assets/telegram.png" alt="">
+            <h3>Telegram Channel</h3>
+          </div>
+          <div class="youtube">
+            <img src="./assets/youtube.png" alt="">
+            <h3>Youtube</h3>
+          </div>
+          <div class="github">
+            <img src="./assets/github.png" alt="">
+            <h3>Github</h3>
+          </div>
+          <div class="gmail">
+            <img src="./assets/gmail.png" alt="">
+            <h3>Gmail</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -98,6 +104,36 @@
 <script>
 export default {
   name: 'MyComponent',
+  mounted() {
+    this.createBackgroundCircles();
+  },
+  methods: {
+    createBackgroundCircles() {
+      const container = document.querySelector('.circles-container');
+
+      // Массив с параметрами кругов (размер, позиция)
+      const circles = [
+        { size: 200, top: 25, left: 5 },   // Круг 1 (левый верхний угол)
+        { size: 200, top: 40, left: 80 }, // Круг 2 (правый верхний угол) 
+        { size: 200, top: 60, left: 20 }, 
+        {size: 200, top: 75, left:70 }// Круг 4 (правый нижний угол)
+    
+      ];
+
+      circles.forEach(circle => {
+        const div = document.createElement('div');
+        div.classList.add('background-circle');
+
+        // Устанавливаем размеры и позиции
+        div.style.width = `${circle.size}px`;
+        div.style.height = `${circle.size}px`;
+        div.style.top = `${circle.top}%`;
+        div.style.left = `${circle.left}%`;
+
+        container.appendChild(div);
+      });
+    },
+  },
 };
 </script>
 
@@ -106,19 +142,39 @@ body {
   background-color: #1F1F1F;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif; /* Шрифт для всего документа */
+  font-family: 'Open Sans', sans-serif;
+  overflow: auto; /* Разрешаем скролл */
+}
+
+.background-container {
+  position: relative;
+  overflow: hidden; /* Круги не выходят за пределы контейнера */
+}
+
+.circles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Круги на заднем плане */
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Контент на переднем плане */
 }
 
 .head {
   display: flex;
-  justify-content: space-between; /* Распределяем пространство между элементами */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  padding: 0 20px; /* Отступы слева и справа */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .links {
   display: flex;
-  gap: 40px; /* Расстояние между ссылками */
+  gap: 40px;
   font-size: 20px;
   padding: 34px 15px;
   cursor: pointer;
@@ -126,24 +182,24 @@ body {
 
 a {
   color: rgb(196, 196, 196);
-  text-decoration: none; /* Убираем подчеркивание у ссылок */
-  position: relative; /* Для позиционирования псевдоэлемента */
+  text-decoration: none;
+  position: relative;
 }
 
 a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -35px; /* Позиция подчеркивания */
-  width: 100%; /* Подчеркивание на всю ширину ссылки */
-  height: 4px; /* Толщина подчеркивания */
-  background-color: #33CAFF; /* Цвет подчеркивания */
-  opacity: 0; /* Начальная прозрачность (подчеркивание скрыто) */
-  transition: opacity 0.5s ease; /* Плавное появление подчеркивания */
+  bottom: -35px;
+  width: 100%;
+  height: 4px;
+  background-color: #33CAFF;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 a:hover::after {
-  opacity: 1; /* Подчеркивание становится видимым */
+  opacity: 1;
 }
 
 a:hover {
@@ -151,55 +207,55 @@ a:hover {
 }
 
 .butterfly {
-  position: absolute; /* Абсолютное позиционирование */
-  left: 50%; /* Сдвигаем картинку на 50% вправо */
-  transform: translateX(-50%); /* Центрируем картинку */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .butterfly img {
-  width: 100px; /* Ширина картинки */
-  height: auto; /* Высота автоматически подстраивается */
+  width: 100px;
+  height: auto;
 }
 
 .buttons {
-  margin-left: auto; /* Кнопка сдвигается вправо */
+  margin-left: auto;
 }
 
 .my-button {
-  padding: 15px 30px; /* Внутренние отступы кнопки */
-  font-size: 20px; /* Размер текста */
-  color: white; /* Цвет текста */
-  background-color: #33CAFF; /* Цвет фона кнопки */
-  border: none; /* Убираем границу */
-  border-radius: 10px; /* Закругленные углы */
-  cursor: pointer; /* Курсор в виде указателя */
-  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+  padding: 15px 30px;
+  font-size: 20px;
+  color: white;
+  background-color: #33CAFF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .my-button:hover {
-  background-color: #1F8FB0; /* Цвет фона при наведении */
+  background-color: #1F8FB0;
 }
 
 .separator {
-  width: 100%; /* Ширина линии */
-  border: none; /* Убираем стандартную рамку */
-  height: 1px; /* Толщина линии */
-  background-color: #383838; /* Цвет линии */
-  margin-top: 0px; /* Отступ сверху */
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #383838;
+  margin-top: 0px;
 }
 
 .aboutMe {
-  display: flex; /* Используем flexbox для расположения текста и картинки */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  gap: 80px; /* Расстояние между текстом и картинкой */
-  max-width: 1200px; /* Ограничение ширины блока */
-  margin-left: 10%; /* Отступ слева */
-  padding: 20px; /* Отступы внутри блока */
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin-left: 10%;
+  padding: 20px;
   padding-bottom: 40px;
 }
 
 .aboutMe .text {
-  flex: 1; /* Текст занимает оставшееся пространство */
+  flex: 1;
 }
 
 .aboutMe h1 {
@@ -208,7 +264,7 @@ a:hover {
   color: #33CAFF;
   font-size: 45px;
   margin-top: 0;
-  margin-bottom: 20px; /* Отступ снизу */
+  margin-bottom: 20px;
 }
 
 .aboutMe p {
@@ -216,16 +272,16 @@ a:hover {
   font-weight: 400;
   color: white;
   font-size: 25px;
-  line-height: 1.6; /* Межстрочный интервал */
-  word-wrap: break-word; /* Перенос длинных слов */
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
 .aboutMe .image img {
-  width: 400px; /* Ширина картинки */
-  height: 400px; /* Высота картинки */
-  border-radius: 50%; /* Делаем картинку круглой */
-  object-fit: cover; /* Сохраняем пропорции картинки */
-  margin-left: 40px; /* Сдвигаем картинку правее */
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 40px;
 }
 
 .projects h1 {
@@ -234,26 +290,26 @@ a:hover {
   color: white;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 0px; /* Отступ снизу */
+  margin-bottom: 0px;
 }
 
 .projects .converter {
-  display: flex; /* Используем flexbox для выравнивания */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  gap: 40px; /* Расстояние между картинкой и текстом */
-  margin: 20px auto; /* Центрируем блок и добавляем отступы */
-  max-width: 1200px; /* Ограничение ширины блока */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 .projects .converter img {
-  width: 250px; /* Ширина картинки */
-  height: 250px; /* Высота картинки */
-  border-radius: 50%; /* Делаем картинку круглой */
-  object-fit: cover; /* Сохраняем пропорции картинки */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .projects .converter-text {
-  flex: 1; /* Текст занимает оставшееся пространство */
+  flex: 1;
 }
 
 .projects .converter h2 {
@@ -261,8 +317,8 @@ a:hover {
   font-weight: 700;
   color: #33CAFF;
   font-size: 30px;
-  margin-top: 0; /* Убираем отступ сверху */
-  margin-bottom: 10px; /* Отступ снизу для заголовка */
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .projects .converter p {
@@ -270,26 +326,26 @@ a:hover {
   font-weight: 400;
   color: white;
   font-size: 20px;
-  line-height: 1.6; /* Межстрочный интервал */
-  margin: 0; /* Убираем отступы у текста */
+  line-height: 1.6;
+  margin: 0;
 }
 
 .projects .cars {
-  display: flex; /* Используем flexbox для выравнивания */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  gap: 40px; /* Расстояние между картинкой и текстом */
-  margin: 20px auto; /* Центрируем блок и добавляем отступы */
-  max-width: 1200px; /* Ограничение ширины блока */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 .projects .cars img {
-  width: 250px; /* Ширина картинки */
-  height: 250px; /* Высота картинки */
-  object-fit: cover; /* Сохраняем пропорции картинки */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .projects .cars-text {
-  flex: 1; /* Текст занимает оставшееся пространство */
+  flex: 1;
 }
 
 .projects .cars h2 {
@@ -297,8 +353,8 @@ a:hover {
   font-weight: 700;
   color: #33CAFF;
   font-size: 30px;
-  margin-top: 0; /* Убираем отступ сверху */
-  margin-bottom: 10px; /* Отступ снизу для заголовка */
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .projects .cars p {
@@ -306,26 +362,26 @@ a:hover {
   font-weight: 400;
   color: white;
   font-size: 20px;
-  line-height: 1.6; /* Межстрочный интервал */
-  margin: 0; /* Убираем отступы у текста */
+  line-height: 1.6;
+  margin: 0;
 }
 
 .projects .cart {
-  display: flex; /* Используем flexbox для выравнивания */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  gap: 40px; /* Расстояние между картинкой и текстом */
-  margin: 20px auto; /* Центрируем блок и добавляем отступы */
-  max-width: 1200px; /* Ограничение ширины блока */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 .projects .cart img {
-  width: 250px; /* Ширина картинки */
-  height: 250px; /* Высота картинки */
-  object-fit: cover; /* Сохраняем пропорции картинки */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .projects .cart-text {
-  flex: 1; /* Текст занимает оставшееся пространство */
+  flex: 1;
 }
 
 .projects .cart h2 {
@@ -333,8 +389,8 @@ a:hover {
   font-weight: 700;
   color: #33CAFF;
   font-size: 30px;
-  margin-top: 0; /* Убираем отступ сверху */
-  margin-bottom: 10px; /* Отступ снизу для заголовка */
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .projects .cart p {
@@ -342,13 +398,13 @@ a:hover {
   font-weight: 400;
   color: white;
   font-size: 20px;
-  line-height: 1.6; /* Межстрочный интервал */
-  margin: 0; /* Убираем отступы у текста */
+  line-height: 1.6;
+  margin: 0;
 }
 
 .connection {
-  text-align: center; /* Центрируем заголовок */
-  margin-top: 40px; /* Отступ сверху */
+  text-align: center;
+  margin-top: 40px;
 }
 
 .connection h1 {
@@ -356,22 +412,21 @@ a:hover {
   font-weight: 700;
   color: white;
   font-size: 30px;
-  margin-bottom: 20px; /* Отступ снизу для заголовка */
+  margin-bottom: 20px;
 }
 
 .social_media {
-  display: flex; /* Используем flexbox для выравнивания */
-  justify-content: center; /* Центрируем элементы по горизонтали */
-  gap: 80px; /* Расстояние между картинками */
-  max-width: 1200px; /* Ограничение ширины блока */
-  margin: 0 auto; /* Центрируем блок */
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .social_media img {
-  width: 250px; /* Ширина картинки */
-  height: 250px; /* Высота картинки */
-
-  object-fit: cover; /* Сохраняем пропорции картинки */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .social_media h3 {
@@ -379,15 +434,32 @@ a:hover {
   font-weight: 400;
   color: white;
   font-size: 20px;
-  margin-top: 10px; /* Отступ сверху для текста */
+  margin-top: 10px;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .social_media {
-    flex-direction: column; /* Элементы располагаются вертикально */
-    align-items: center; /* Центрируем элементы */
-    gap: 20px; /* Уменьшаем расстояние между элементами */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.background-circle {
+  position: absolute;
+  background-color: rgba(51, 202, 255, 0.1);
+  border-radius: 50%;
+  z-index: -1; /* Круги на заднем плане */
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
 </style>
