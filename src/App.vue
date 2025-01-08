@@ -63,7 +63,9 @@
       <div class = "cart-text">
         <h2>Marketplace</h2>
         <p>
-          
+          The marketplace was launched in December 2024. In the region where I live, 
+          grocery delivery is poorly developed and it was decided to solve this problem. 
+          A marketplace with food delivery from different stores in the region
         </p>
       </div>
     </div>
