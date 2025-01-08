@@ -212,7 +212,7 @@ a:hover {
 .projects .converter h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  color: white;
+  color: #33CAFF;
   font-size: 30px;
   margin-top: 0; /* Убираем отступ сверху */
   margin-bottom: 10px; /* Отступ снизу для заголовка */
