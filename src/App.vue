@@ -8,9 +8,9 @@
       <!-- Шапка -->
       <div class="head">
         <div class="links">
-          <a>About me</a>
-          <a>Projects</a>
-          <a>Connection</a>
+          <a href="#aboutMe">{{ translations[currentLanguage].aboutMe }}</a>
+          <a href="#project">{{ translations[currentLanguage].projects }}</a>
+          <a href="#connection">{{ translations[currentLanguage].connection }}</a>
         </div>
 
         <div class="butterfly">
@@ -18,18 +18,19 @@
         </div>
 
         <div class="buttons">
-          <button class="my-button">My CV</button>
+          <button class="my-button translate-button" @click="toggleLanguage">
+            {{ translations[currentLanguage].toggleLanguage }}
+          </button>
+          <button class="my-button">{{ translations[currentLanguage].myCV }}</button>
         </div>
       </div>
       <hr class="separator">
 
       <!-- Блок "About Me" -->
-      <div class="aboutMe">
+      <div class="aboutMe" id="aboutMe">
         <div class="text">
           <h1>Metelykx</h1>
-          <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
-            My main goal is to develop my products that will help society and cooperate with Pavel Durov.
-            I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
+          <p>{{ translations[currentLanguage].aboutMeText }}</p>
         </div>
         <div class="image">
           <img src="./assets/aboutMe.jpg" alt="aboutMe">
@@ -37,63 +38,61 @@
       </div>
 
       <!-- Блок "Projects" -->
-      <div class="projects">
-        <h1>Projects</h1>
+      <div class="projects" id="project">
+        <h1>{{ translations[currentLanguage].projects }}</h1>
 
         <div class="converter">
           <img src="./assets/card.png" alt="converter">
           <div class="converter-text">
-            <h2>Converter</h2>
-            <p>The essence of the project is currency conversion, and I have worked with
-              currencies such as Hryvnia, Ruble, Dram, Dollar, Euro and Pound Sterling.
-              The last three of them are the most popular currencies in the world.</p>
+            <h2>{{ translations[currentLanguage].converterTitle }}</h2>
+            <p>{{ translations[currentLanguage].converterText }}</p>
           </div>
         </div>
 
         <div class="cars">
           <img src="./assets/person.png" alt="">
           <div class="cars-text">
-            <h2>Cars</h2>
-            <p>
-              Thanks to this project, the user will be able to choose the
-              right car using artificial intelligence and order it from another country.
-              Also, choose your favorite cars and add them to favorites.
-            </p>
+            <h2>{{ translations[currentLanguage].carsTitle }}</h2>
+            <p>{{ translations[currentLanguage].carsText }}</p>
           </div>
         </div>
 
         <div class="cart">
           <img src="./assets/cart.png" alt="">
           <div class="cart-text">
-            <h2>Marketplace</h2>
-            <p>
-              The marketplace was launched in December 2024. In the region where I live,
-              grocery delivery is poorly developed and it was decided to solve this problem.
-              A marketplace with food delivery from different stores in the region
-            </p>
+            <h2>{{ translations[currentLanguage].marketplaceTitle }}</h2>
+            <p>{{ translations[currentLanguage].marketplaceText }}</p>
           </div>
         </div>
       </div>
 
       <!-- Блок "Connection" -->
-      <div class="connection">
-        <h1>Connection</h1>
+      <div class="connection" id="connection">
+        <h1>{{ translations[currentLanguage].connection }}</h1>
         <div class="social_media">
           <div class="telegram">
-            <img src="./assets/telegram.png" alt="">
-            <h3>Telegram Channel</h3>
+            <a href="https://t.me/metelykx1" target="_blank">
+              <img src="./assets/telegram.png" alt="Telegram">
+            </a>
+            <h3>{{ translations[currentLanguage].telegram }}</h3>
           </div>
           <div class="youtube">
-            <img src="./assets/youtube.png" alt="">
-            <h3>Youtube</h3>
+            <a href="https://www.youtube.com/@metelykx" target="_blank">
+              <img src="./assets/youtube.png" alt="Youtube">
+            </a>
+            <h3>{{ translations[currentLanguage].youtube }}</h3>
           </div>
           <div class="github">
-            <img src="./assets/github.png" alt="">
-            <h3>Github</h3>
+            <a href="https://github.com/metelykx" target="_blank">
+              <img src="./assets/github.png" alt="Github">
+            </a>
+            <h3>{{ translations[currentLanguage].github }}</h3>
           </div>
           <div class="gmail">
-            <img src="./assets/gmail.png" alt="">
-            <h3>Gmail</h3>
+            <a href="mailto:ivaschenkoodenys@gmail.com" target="_blank">
+              <img src="./assets/gmail.png" alt="Gmail">
+            </a>
+            <h3>{{ translations[currentLanguage].gmail }}</h3>
           </div>
         </div>
       </div>
@@ -104,35 +103,76 @@
 <script>
 export default {
   name: 'MyComponent',
-  mounted() {
-    this.createBackgroundCircles();
+  data() {
+    return {
+      currentLanguage: 'en', // Текущий язык (по умолчанию английский)
+      translations: {
+        en: {
+          aboutMe: 'About me',
+          projects: 'Projects',
+          connection: 'Connection',
+          myCV: 'My CV',
+          toggleLanguage: 'Russian',
+          aboutMeText: 'Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I\'m currently studying at a local university and programming in Swift and JavaScript. My main goal is to develop my products that will help society and cooperate with Pavel Durov. I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.',
+          converterTitle: 'Converter',
+          converterText: 'The essence of the project is currency conversion, and I have worked with currencies such as Hryvnia, Ruble, Dram, Dollar, Euro and Pound Sterling. The last three of them are the most popular currencies in the world.',
+          carsTitle: 'Cars',
+          carsText: 'Thanks to this project, the user will be able to choose the right car using artificial intelligence and order it from another country. Also, choose your favorite cars and add them to favorites.',
+          marketplaceTitle: 'Marketplace',
+          marketplaceText: 'The marketplace was launched in December 2024. In the region where I live, grocery delivery is poorly developed and it was decided to solve this problem. A marketplace with food delivery from different stores in the region.',
+          telegram: 'Telegram Channel',
+          youtube: 'Youtube',
+          github: 'Github',
+          gmail: 'Gmail',
+        },
+        ru: {
+          aboutMe: 'Обо мне',
+          projects: 'Проекты',
+          connection: 'Связь',
+          myCV: 'Моё резюме',
+          toggleLanguage: 'Английский',
+          aboutMeText: 'Всем привет! Меня зовут Денис Иващенко (metelykx — мой псевдоним). Я из Крыма, мне 19 лет. В настоящее время я учусь в местном университете и программирую на Swift и JavaScript. Моя главная цель — разрабатывать продукты, которые помогут обществу, и сотрудничать с Павлом Дуровым. Я увлечен программированием и люблю создавать новые вещи. Также мне нравится путешествовать и исследовать новые места. Надеюсь, что вы найдете меня интересным, и я смогу вам чем-то помочь.',
+          converterTitle: 'Конвертер',
+          converterText: 'Суть проекта — конвертация валют. Я работал с такими валютами, как гривна, рубль, драм, доллар, евро и фунт стерлингов. Последние три являются самыми популярными валютами в мире.',
+          carsTitle: 'Автомобили',
+          carsText: 'Благодаря этому проекту пользователь сможет выбрать подходящий автомобиль с помощью искусственного интеллекта и заказать его из другой страны. Также можно добавлять любимые автомобили в избранное.',
+          marketplaceTitle: 'Маркетплейс',
+          marketplaceText: 'Маркетплейс был запущен в декабре 2024 года. В регионе, где я живу, доставка продуктов развита слабо, и было решено решить эту проблему. Маркетплейс с доставкой еды из различных магазинов региона.',
+          telegram: 'Телеграм-канал',
+          youtube: 'Ютуб канал',
+          github: 'Гитхаб репозиторий',
+          gmail: 'Почта',
+        },
+      },
+    };
   },
   methods: {
+    toggleLanguage() {
+      this.currentLanguage = this.currentLanguage === 'en' ? 'ru' : 'en';
+    },
     createBackgroundCircles() {
       const container = document.querySelector('.circles-container');
 
-      // Массив с параметрами кругов (размер, позиция)
       const circles = [
-        { size: 200, top: 25, left: 5 },   // Круг 1 (левый верхний угол)
-        { size: 200, top: 40, left: 80 }, // Круг 2 (правый верхний угол) 
-        { size: 200, top: 60, left: 20 }, 
-        {size: 200, top: 75, left:70 }// Круг 4 (правый нижний угол)
-    
+        { size: 200, top: 25, left: 5 },
+        { size: 200, top: 40, left: 80 },
+        { size: 200, top: 60, left: 20 },
+        { size: 200, top: 75, left: 70 },
       ];
 
       circles.forEach(circle => {
         const div = document.createElement('div');
         div.classList.add('background-circle');
-
-        // Устанавливаем размеры и позиции
         div.style.width = `${circle.size}px`;
         div.style.height = `${circle.size}px`;
         div.style.top = `${circle.top}%`;
         div.style.left = `${circle.left}%`;
-
         container.appendChild(div);
       });
     },
+  },
+  mounted() {
+    this.createBackgroundCircles();
   },
 };
 </script>
@@ -230,6 +270,12 @@ a:hover {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.my-button.translate-button {
+  padding: 10px 20px; /* Уменьшаем padding */
+  font-size: 16px; /* Уменьшаем размер шрифта */
+  margin-right: 20px; /* Отодвигаем кнопку левее */
 }
 
 .my-button:hover {
