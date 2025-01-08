@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class = "marketplace">
+    <div class = "cart">
       <img src="./assets/cart.png" alt="">
       <div class = "cart-text">
         <h2>Marketplace</h2>
@@ -223,8 +223,8 @@ a:hover {
 }
 
 .projects .converter img {
-  width: 300px; /* Ширина картинки */
-  height: 300px; /* Высота картинки */
+  width: 250px; /* Ширина картинки */
+  height: 250px; /* Высота картинки */
   border-radius: 50%; /* Делаем картинку круглой */
   object-fit: cover; /* Сохраняем пропорции картинки */
 }
@@ -259,8 +259,8 @@ a:hover {
 }
 
 .projects .cars img {
-  width: 300px; /* Ширина картинки */
-  height: 300px; /* Высота картинки */
+  width: 250px; /* Ширина картинки */
+  height: 250px; /* Высота картинки */
 
   object-fit: cover; /* Сохраняем пропорции картинки */
 }
@@ -286,4 +286,42 @@ a:hover {
   line-height: 1.6; /* Межстрочный интервал */
   margin: 0; /* Убираем отступы у текста */
 }
+
+.projects .cart {
+  display: flex; /* Используем flexbox для выравнивания */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  gap: 40px; /* Расстояние между картинкой и текстом */
+  margin: 20px auto; /* Центрируем блок и добавляем отступы */
+  max-width: 1200px; /* Ограничение ширины блока */
+}
+
+.projects .cart img {
+  width: 250px; /* Ширина картинки */
+  height: 250px; /* Высота картинки */
+
+  object-fit: cover; /* Сохраняем пропорции картинки */
+}
+
+.projects .cart-text {
+  flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.projects .cart h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #33CAFF;
+  font-size: 30px;
+  margin-top: 0; /* Убираем отступ сверху */
+  margin-bottom: 10px; /* Отступ снизу для заголовка */
+}
+
+.projects .cart p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  line-height: 1.6; /* Межстрочный интервал */
+  margin: 0; /* Убираем отступы у текста */
+}
+
 </style>
