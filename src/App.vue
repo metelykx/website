@@ -226,7 +226,7 @@ a {
   position: relative;
 }
 
-a::after {
+.links a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -276,6 +276,16 @@ a:hover {
   padding: 10px 20px; /* Уменьшаем padding */
   font-size: 16px; /* Уменьшаем размер шрифта */
   margin-right: 20px; /* Отодвигаем кнопку левее */
+  background-color: transparent; /* Прозрачный фон */
+  border: 2px solid #33CAFF; /* Граница с цветом #33CAFF */
+  color: #33CAFF; /* Цвет текста */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Плавные переходы */
+}
+
+.my-button.translate-button:hover {
+  background-color: #33CAFF; /* Фон при наведении */
+  color: white; /* Цвет текста при наведении */
+  border-color: #33CAFF; /* Цвет границы при наведении */
 }
 
 .my-button:hover {
@@ -467,6 +477,10 @@ a:hover {
   gap: 80px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.social_media a {
+  outline: none; /* Убираем голубую обводку при наведении */
 }
 
 .social_media img {
