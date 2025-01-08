@@ -21,11 +21,21 @@
 
   <!-- Блок "About Me" -->
   <div class="aboutMe">
-    <h1>Metelykx</h1>
-    <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
-      My main goal is to develop my products that will help society and cooperate with Pavel Durov.
-      I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
+    <div class="text">
+      <h1>Metelykx</h1>
+      <p>Hello everyone! My name is Denis Ivashchenko (metelykx is my pseudonym) I am from Crimea and I am 19 years old. I'm currently studying at a local university and programming in Swift and JavaScript.
+        My main goal is to develop my products that will help society and cooperate with Pavel Durov.
+        I have a passion for programming and I love to create new things. I also like to travel and explore new places. I hope that you will find me interesting and that I can help you in any way.</p>
+    </div>
+    <div class="image">
+      <img src="./assets/aboutMe.jpg" alt="aboutMe">
+    </div>
   </div>
+
+  <div class = "projects">
+    <h1>Projects</h1>
+  </div>
+
 </template>
 
 <script>
@@ -122,9 +132,16 @@ a:hover {
 }
 
 .aboutMe {
-  max-width: 800px; /* Ограничение ширины текста */
-  margin: 0 auto; /* Центрирование блока */
+  display: flex; /* Используем flexbox для расположения текста и картинки */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  gap: 80px; /* Расстояние между текстом и картинкой */
+  max-width: 1200px; /* Ограничение ширины блока */
+  margin-left: 10%; /* Отступ слева */
   padding: 20px; /* Отступы внутри блока */
+}
+
+.aboutMe .text {
+  flex: 1; /* Текст занимает оставшееся пространство */
 }
 
 .aboutMe h1 {
@@ -132,7 +149,7 @@ a:hover {
   font-weight: 700;
   color: #33CAFF;
   font-size: 45px;
-  margin-top: 50px;
+  margin-top: 0;
   margin-bottom: 20px; /* Отступ снизу */
 }
 
@@ -143,5 +160,41 @@ a:hover {
   font-size: 25px;
   line-height: 1.6; /* Межстрочный интервал */
   word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.aboutMe .image img {
+  width: 400px; /* Ширина картинки */
+  height: 400px; /* Высота картинки */
+  border-radius: 50%; /* Делаем картинку круглой */
+  object-fit: cover; /* Сохраняем пропорции картинки */
+  margin-left: 40px; /* Сдвигаем картинку правее */
+}
+
+.projects h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .aboutMe {
+    flex-direction: column; /* Элементы располагаются вертикально */
+    margin-left: 20px; /* Уменьшаем отступ слева */
+    padding: 10px; /* Уменьшаем отступы внутри блока */
+    gap: 20px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .aboutMe .image img {
+    width: 150px; /* Уменьшаем размер картинки */
+    height: 150px; /* Уменьшаем размер картинки */
+    margin-top: 20px; /* Отступ сверху для картинки */
+    margin-left: 0; /* Убираем отступ слева на мобильных устройствах */
+  }
 }
 </style>
