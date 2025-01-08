@@ -32,10 +32,20 @@
     </div>
   </div>
 
-  <div class = "projects">
+  <!-- Блок "Projects" -->
+  <div class="projects">
     <h1>Projects</h1>
-  </div>
 
+    <div class="converter">
+      <img src="./assets/card.png" alt="converter">
+      <div class="converter-text">
+        <h2>Converter</h2> <!-- Заголовок над текстом -->
+        <p>The essence of the project is currency conversion, and I have worked with
+          currencies such as Hryvnia, Ruble, Dram, Dollar, Euro and Pound Sterling. 
+          The last three of them are the most popular currencies in the world.</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -49,7 +59,7 @@ body {
   background-color: #1F1F1F;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif; /* Добавлено для всего документа */
+  font-family: 'Open Sans', sans-serif; /* Шрифт для всего документа */
 }
 
 .head {
@@ -69,7 +79,7 @@ body {
 
 a {
   color: rgb(196, 196, 196);
-  text-decoration: none; /* Убираем подчеркивание у ссылок по умолчанию */
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
   position: relative; /* Для позиционирования псевдоэлемента */
 }
 
@@ -138,7 +148,7 @@ a:hover {
   max-width: 1200px; /* Ограничение ширины блока */
   margin-left: 10%; /* Отступ слева */
   padding: 20px; /* Отступы внутри блока */
-  padding-bottom:40px;
+  padding-bottom: 40px;
 }
 
 .aboutMe .text {
@@ -177,10 +187,45 @@ a:hover {
   color: white;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px; /* Отступ снизу */
+  margin-bottom: 0px; /* Отступ снизу */
 }
 
+.projects .converter {
+  display: flex; /* Используем flexbox для выравнивания */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  gap: 40px; /* Расстояние между картинкой и текстом */
+  margin: 20px auto; /* Центрируем блок и добавляем отступы */
+  max-width: 1200px; /* Ограничение ширины блока */
+}
 
+.projects .converter img {
+  width: 300px; /* Ширина картинки */
+  height: 300px; /* Высота картинки */
+  border-radius: 50%; /* Делаем картинку круглой */
+  object-fit: cover; /* Сохраняем пропорции картинки */
+}
+
+.projects .converter-text {
+  flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.projects .converter h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 30px;
+  margin-top: 0; /* Убираем отступ сверху */
+  margin-bottom: 10px; /* Отступ снизу для заголовка */
+}
+
+.projects .converter p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  line-height: 1.6; /* Межстрочный интервал */
+  margin: 0; /* Убираем отступы у текста */
+}
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
@@ -196,6 +241,21 @@ a:hover {
     height: 150px; /* Уменьшаем размер картинки */
     margin-top: 20px; /* Отступ сверху для картинки */
     margin-left: 0; /* Убираем отступ слева на мобильных устройствах */
+  }
+
+  .projects .converter {
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрируем элементы */
+    text-align: center; /* Текст по центру */
+  }
+
+  .projects .converter img {
+    width: 200px; /* Уменьшаем размер картинки */
+    height: 200px; /* Уменьшаем размер картинки */
+  }
+
+  .projects .converter-text {
+    margin-top: 20px; /* Отступ сверху для текста */
   }
 }
 </style>
