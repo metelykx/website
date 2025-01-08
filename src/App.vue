@@ -21,7 +21,9 @@
           <button class="my-button translate-button" @click="toggleLanguage">
             {{ translations[currentLanguage].toggleLanguage }}
           </button>
-          <button class="my-button">{{ translations[currentLanguage].myCV }}</button>
+          <button class="my-button" @click="openCVModal">
+            {{ translations[currentLanguage].myCV }}
+          </button>
         </div>
       </div>
       <hr class="separator">
@@ -97,6 +99,17 @@
         </div>
       </div>
     </div>
+
+    <!-- Модальное окно для CV -->
+    <div v-if="showCVModal" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-content">
+          <h2>{{ translations[currentLanguage].myCV }}</h2>
+          <p>Здесь будет содержимое вашего резюме.</p>
+          <button @click="closeCVModal" class="my-button">Закрыть</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -106,6 +119,7 @@ export default {
   data() {
     return {
       currentLanguage: 'en', // Текущий язык (по умолчанию английский)
+      showCVModal: false, // Состояние модального окна
       translations: {
         en: {
           aboutMe: 'About me',
@@ -149,6 +163,12 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'en' ? 'ru' : 'en';
+    },
+    openCVModal() {
+      this.showCVModal = true; // Открываем модальное окно
+    },
+    closeCVModal() {
+      this.showCVModal = false; // Закрываем модальное окно
     },
     createBackgroundCircles() {
       const container = document.querySelector('.circles-container');
@@ -521,5 +541,48 @@ a:hover {
   50% {
     transform: translateY(-20px);
   }
+}
+
+/* Стили для модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Затемнение фона */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Убедимся, что модальное окно поверх всего */
+}
+
+.modal {
+  background-color: #1F1F1F;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #33CAFF;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
 }
 </style>
