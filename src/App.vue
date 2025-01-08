@@ -70,6 +70,12 @@
       </div>
     </div>
   </div>
+
+
+
+  <div class = "connection"> 
+    <h1>Connection</h1>
+  </div>
 </template>
 
 <script>
