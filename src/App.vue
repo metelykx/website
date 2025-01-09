@@ -21,7 +21,7 @@
           <button class="my-button translate-button" @click="toggleLanguage">
             {{ translations[currentLanguage].toggleLanguage }}
           </button>
-          <button class="my-button" @click="openCVModal">
+          <button class="my-button" @click="redirectToCV">
             {{ translations[currentLanguage].myCV }}
           </button>
         </div>
@@ -120,6 +120,10 @@ export default {
     return {
       currentLanguage: 'en', // Текущий язык (по умолчанию английский)
       showCVModal: false, // Состояние модального окна
+      cvLinks: {
+        en: 'https://docs.google.com/document/d/1ao88by3tvZzrcbDElZ9HiN26hmYADHadxFYu-c6K2Lc/edit?usp=sharing',
+        ru: 'https://docs.google.com/document/d/1O2yhJTHKXwH8lFa38a-U-vgA-fK72Q5s3E3VAxcDWsU/edit?usp=sharing',
+      },
       translations: {
         en: {
           aboutMe: 'About me',
@@ -169,6 +173,10 @@ export default {
     },
     closeCVModal() {
       this.showCVModal = false; // Закрываем модальное окно
+    },
+    redirectToCV() {
+      // Перенаправляем на соответствующую ссылку в зависимости от языка
+      window.open(this.cvLinks[this.currentLanguage], '_blank');
     },
     createBackgroundCircles() {
       const container = document.querySelector('.circles-container');
