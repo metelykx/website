@@ -7,10 +7,18 @@
     <div class="content">
       <!-- Шапка -->
       <div class="head">
-        <div class="links">
-          <a href="#aboutMe">{{ translations[currentLanguage].aboutMe }}</a>
-          <a href="#project">{{ translations[currentLanguage].projects }}</a>
-          <a href="#connection">{{ translations[currentLanguage].connection }}</a>
+        <!-- Бургер-меню -->
+        <div class="burger-menu" @click="toggleBurgerMenu">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+
+        <!-- Ссылки (скрыты на мобильных устройствах) -->
+        <div class="links" :class="{ 'active': isBurgerMenuOpen }">
+          <a href="#aboutMe" @click="closeBurgerMenu">{{ translations[currentLanguage].aboutMe }}</a>
+          <a href="#project" @click="closeBurgerMenu">{{ translations[currentLanguage].projects }}</a>
+          <a href="#connection" @click="closeBurgerMenu">{{ translations[currentLanguage].connection }}</a>
         </div>
 
         <div class="butterfly">
@@ -120,6 +128,7 @@ export default {
     return {
       currentLanguage: 'en', // Текущий язык (по умолчанию английский)
       showCVModal: false, // Состояние модального окна
+      isBurgerMenuOpen: false, // Состояние бургер-меню
       cvLinks: {
         en: 'https://docs.google.com/document/d/1ao88by3tvZzrcbDElZ9HiN26hmYADHadxFYu-c6K2Lc/edit?usp=sharing',
         ru: 'https://docs.google.com/document/d/1O2yhJTHKXwH8lFa38a-U-vgA-fK72Q5s3E3VAxcDWsU/edit?usp=sharing',
@@ -177,6 +186,12 @@ export default {
     redirectToCV() {
       // Перенаправляем на соответствующую ссылку в зависимости от языка
       window.open(this.cvLinks[this.currentLanguage], '_blank');
+    },
+    toggleBurgerMenu() {
+      this.isBurgerMenuOpen = !this.isBurgerMenuOpen; // Открываем/закрываем бургер-меню
+    },
+    closeBurgerMenu() {
+      this.isBurgerMenuOpen = false; // Закрываем бургер-меню
     },
     createBackgroundCircles() {
       const container = document.querySelector('.circles-container');
@@ -527,27 +542,245 @@ a:hover {
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-  .social_media {
+  .head {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+  }
+
+  .links {
+    display: none; /* Скрываем обычные ссылки на мобильных устройствах */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1F1F1F;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .links.active {
+    display: flex; /* Показываем ссылки при открытом бургер-меню */
+  }
+
+  .links a {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .links a::after {
+    display: none; /* Убираем подчеркивание на мобильных устройствах */
+  }
+
+  .burger-menu {
+    display: flex; /* Показываем бургер-меню на мобильных устройствах */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #33CAFF;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .aboutMe {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 5%;
+    padding: 10px;
+  }
+
+  .aboutMe .image img {
+    width: 200px;
+    height: 200px;
+    margin-left: 0;
+  }
+
+  .projects .converter,
+  .projects .cars,
+  .projects .cart {
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .projects .converter img,
+  .projects .cars img,
+  .projects .cart img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social_media {
+    flex-direction: column;
     gap: 20px;
   }
-}
 
-.background-circle {
-  position: absolute;
-  background-color: rgba(51, 202, 255, 0.1);
-  border-radius: 50%;
-  z-index: -1; /* Круги на заднем плане */
-  animation: float 10s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+  .social_media img {
+    width: 150px;
+    height: 150px;
   }
-  50% {
-    transform: translateY(-20px);
+
+  .modal {
+    max-width: 90%;
+  }
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .head {
+    padding: 10px;
+  }
+
+  .links {
+    gap: 20px;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .aboutMe {
+    gap: 40px;
+    margin-left: 5%;
+    padding: 20px;
+  }
+
+  .aboutMe .image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .projects .converter,
+  .projects .cars,
+  .projects .cart {
+    gap: 30px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .projects .converter img,
+  .projects .cars img,
+  .projects .cart img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social_media {
+    gap: 40px;
+  }
+
+  .social_media img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .modal {
+    max-width: 70%;
+  }
+}
+
+/* Адаптация для десктопов */
+@media (min-width: 1024px) {
+  .head {
+    padding: 0 20px;
+  }
+
+  .links {
+    gap: 40px;
+    font-size: 20px;
+    padding: 34px 15px;
+  }
+
+  .aboutMe {
+    gap: 80px;
+    margin-left: 10%;
+    padding: 20px;
+  }
+
+  .aboutMe .image img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .projects .converter,
+  .projects .cars,
+  .projects .cart {
+    gap: 40px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .projects .converter img,
+  .projects .cars img,
+  .projects .cart img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .social_media {
+    gap: 80px;
+  }
+
+  .social_media img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .modal {
+    max-width: 500px;
+  }
+}
+
+/* Общие улучшения для всех устройств */
+@media (max-width: 768px) {
+  .my-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .my-button.translate-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .aboutMe h1 {
+    font-size: 30px;
+  }
+
+  .aboutMe p {
+    font-size: 18px;
+  }
+
+  .projects h1 {
+    font-size: 24px;
+  }
+
+  .projects .converter h2,
+  .projects .cars h2,
+  .projects .cart h2 {
+    font-size: 24px;
+  }
+
+  .projects .converter p,
+  .projects .cars p,
+  .projects .cart p {
+    font-size: 16px;
+  }
+
+  .connection h1 {
+    font-size: 24px;
+  }
+
+  .social_media h3 {
+    font-size: 16px;
   }
 }
 
