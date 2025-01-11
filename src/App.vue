@@ -558,6 +558,12 @@ a:hover {
     display: none;
   }
 
+  /* Уменьшаем размер бабочки */
+  .butterfly img {
+    width: 60px; /* Уменьшаем размер бабочки для мобильных устройств */
+    height: auto;
+  }
+
   /* Центрируем бабочку и кнопки */
   .butterfly {
     margin-top: 10px;
