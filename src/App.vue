@@ -566,7 +566,7 @@ a:hover {
 
   /* Центрируем бабочку и кнопки */
   .butterfly {
-    margin-top: 10px;
+    transform: translateX(-280%);
   }
 
   .buttons {
@@ -627,6 +627,7 @@ a:hover {
     padding: 10px;
   }
 
+  
   .links {
     gap: 20px;
     font-size: 18px;
@@ -664,8 +665,8 @@ a:hover {
   }
 
   .social_media img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 
   .modal {
@@ -715,10 +716,7 @@ a:hover {
     gap: 80px;
   }
 
-  .social_media img {
-    width: 250px;
-    height: 250px;
-  }
+  
 
   .modal {
     max-width: 500px;
@@ -812,4 +810,24 @@ a:hover {
 .modal-content button {
   margin-top: 20px;
 }
+
+
+.background-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(51, 202, 255, 0.1); /* Цвет кругов с прозрачностью */
+  z-index: 1; /* Круги на заднем плане */
+  animation: float 10s infinite ease-in-out; /* Анимация для кругов */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
 </style>
