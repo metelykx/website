@@ -7,14 +7,14 @@
     <div class="content">
       <!-- Шапка -->
       <div class="head">
-        <!-- Бургер-меню -->
+        <!-- Бургер-меню (оставлено, но будет скрыто в мобильной версии) -->
         <div class="burger-menu" @click="toggleBurgerMenu">
           <div class="burger-line"></div>
           <div class="burger-line"></div>
           <div class="burger-line"></div>
         </div>
 
-        <!-- Ссылки (скрыты на мобильных устройствах) -->
+        <!-- Ссылки (оставлены, но будут скрыты в мобильной версии) -->
         <div class="links" :class="{ 'active': isBurgerMenuOpen }">
           <a href="#aboutMe" @click="closeBurgerMenu">{{ translations[currentLanguage].aboutMe }}</a>
           <a href="#project" @click="closeBurgerMenu">{{ translations[currentLanguage].projects }}</a>
@@ -548,49 +548,26 @@ a:hover {
     padding: 10px;
   }
 
-  .links {
-    display: none; /* Скрываем обычные ссылки на мобильных устройствах */
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #1F1F1F;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-
-  .links.active {
-    display: flex; /* Показываем ссылки при открытом бургер-меню */
-  }
-
-  .links a {
-    color: white;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .links a::after {
-    display: none; /* Убираем подчеркивание на мобильных устройствах */
-  }
-
+  /* Скрываем бургер-меню */
   .burger-menu {
-    display: flex; /* Показываем бургер-меню на мобильных устройствах */
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1000;
+    display: none;
   }
 
-  .burger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #33CAFF;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  /* Скрываем ссылки */
+  .links {
+    display: none;
   }
 
+  /* Центрируем бабочку и кнопки */
+  .butterfly {
+    margin-top: 10px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  /* Адаптация для блока "About Me" */
   .aboutMe {
     flex-direction: column;
     gap: 20px;
@@ -604,6 +581,7 @@ a:hover {
     margin-left: 0;
   }
 
+  /* Адаптация для блока "Projects" */
   .projects .converter,
   .projects .cars,
   .projects .cart {
@@ -620,6 +598,7 @@ a:hover {
     height: 150px;
   }
 
+  /* Адаптация для блока "Connection" */
   .social_media {
     flex-direction: column;
     gap: 20px;
@@ -630,6 +609,7 @@ a:hover {
     height: 150px;
   }
 
+  /* Адаптация для модального окна */
   .modal {
     max-width: 90%;
   }
